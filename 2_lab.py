@@ -23,6 +23,4 @@ def is_prime(number):
         if number % i == 0:
             a.append(i)
 
-    if len(a) > 2:
-        return False
-    return True
+    return not len(a) > 2
