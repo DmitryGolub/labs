@@ -11,6 +11,7 @@ def square(number):
 def max_to_two(number_first, number_second):
     return number_first if number_first > number_second else number_second
 
+
 # задание 2
 def describe_person(name, age=30):
     s = f'Your name: {name}. Your age: {age}'
@@ -19,8 +20,15 @@ def describe_person(name, age=30):
 
 def is_prime(number):
     a = []
-    for i in range(1, number+1):
+    if number < 1:
+        return False
+    if number % 2 == 0:
+        return False
+    for i in range(1, int(number**0.5)+1):
         if number % i == 0:
             a.append(i)
 
-    return not len(a) > 2
+    return len(a) <= 2
+
+
+print(is_prime(13))

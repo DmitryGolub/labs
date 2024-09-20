@@ -14,7 +14,7 @@ def validator_1(data):
 # первая задача
 number = input('Введите число: ')
 
-while not validator_1(number) or validator_1(number) < 1:
+while not validator_1(number):
     number = input('Введите число: ')
 
 number = validator_1(number)
