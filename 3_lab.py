@@ -8,7 +8,7 @@ with open('files/example.txt', 'r', encoding='utf-8') as file:
 with open('files/example.txt', 'r', encoding='utf-8') as file:
     # второй способ чтения
     for line in file:
-        print(line)
+        print(line, end='')
 
 
 # задание 2
