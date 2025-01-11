@@ -12,6 +12,7 @@ with open('files/example.txt', 'r', encoding='utf-8') as file:
 
 
 # задание 2
+print('Введите /end, если хотите закончить ввод текста')
 with open('files/user_input.txt', 'a', encoding='utf-8') as file:
     text = input('>>> ')
     while text != '/end':
@@ -21,11 +22,13 @@ with open('files/user_input.txt', 'a', encoding='utf-8') as file:
 
 # задание 3
 try:
-    with open('file/user_input.txt', 'a', encoding='utf-8') as file:
+    print('Введите /end, если хотите закончить ввод текста')
+    with open('files/user_input.txt', 'a', encoding='utf-8') as file:
         text = input('>>> ')
-        while text != '/end':
+        while text.lower().strip() != '/end':
             file.write(text + '\n')
             text = input('>>> ')
+
 except FileNotFoundError:
     print('Файл не найден')
 

@@ -1,0 +1,5 @@
+venv/
+generator.py
+test.py
+.idea/
+__pycache__/
